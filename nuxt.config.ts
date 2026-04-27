@@ -26,7 +26,6 @@ export default defineNuxtConfig({
   },
 
   ogImage: {
-    fonts: ['Inter Tight:500', 'Instrument Serif:400', 'Caveat:400'],
   },
 
   modules: [
@@ -83,15 +82,6 @@ export default defineNuxtConfig({
         loc: '/',
         changefreq: 'monthly',
         priority: 1.0,
-        alternatives: [
-          { hreflang: 'fr', href: 'https://yunikon.re/' },
-          { hreflang: 'en', href: 'https://yunikon.re/en' },
-        ],
-      },
-      {
-        loc: '/en',
-        changefreq: 'monthly',
-        priority: 0.9,
       },
     ],
   },
