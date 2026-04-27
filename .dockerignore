@@ -1,0 +1,14 @@
+node_modules
+.output
+.nuxt
+.nitro
+.cache
+.data
+dist
+.env
+.env.*
+.git
+.github
+.claude
+.idea
+*.log
