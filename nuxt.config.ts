@@ -6,6 +6,13 @@ export default defineNuxtConfig({
 
   nitro: {
     devProxy: {},
+    compressPublicAssets: true,
+  },
+
+  routeRules: {
+    '/**': {
+      headers: { 'X-Powered-By': '' },
+    },
   },
 
   runtimeConfig: {
@@ -54,16 +61,12 @@ export default defineNuxtConfig({
     defaultLocale: 'fr',
     strategy: 'prefix_except_default',
     langDir: 'locales/',
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: 'i18n_redirected',
-      redirectOn: 'root',
-    },
+    detectBrowserLanguage: false,
   },
 
   site: {
     url: 'https://yunikon.re',
-    name: 'Yunikon — Quentin Robert · Développeur Fullstack',
+    name: 'Yunikon',
     description: 'Développeur fullstack freelance à Toulouse, spécialisé en Nuxt, TypeScript et applications web modernes. Disponible en remote.',
     defaultLocale: 'fr',
   },

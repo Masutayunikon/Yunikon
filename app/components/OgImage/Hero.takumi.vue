@@ -71,6 +71,7 @@ const green = '#4a7c59'
         <div class="relative h-full p-3.5 overflow-hidden" :style="{ background: paper, border: `2px solid ${ink}` }">
           <img
               src="/me.png"
+              alt="Quentin Robert — Développeur Fullstack Freelance"
               class="w-full h-full object-cover object-top block"
               style="filter: saturate(0.85) contrast(1.02);"
           />

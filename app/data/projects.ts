@@ -151,6 +151,7 @@ export const projects: Project[] = [
     title: 'Fankarr',
     stack: ['Vue 3', 'Express', 'Python', 'TypeScript', 'Docker', 'Bun', 'CI/CD'],
     links: [
+      { kind: 'demo', href: 'https://fan-kai.fandom.com/fr' },
       { kind: 'github', href: 'https://github.com/Masutayunikon/FanKarr' },
     ],
     images: [
