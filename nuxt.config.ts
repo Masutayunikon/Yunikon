@@ -18,7 +18,9 @@ export default defineNuxtConfig({
     mailTo: '',
   },
 
-  ogImage: { zeroRuntime: true },
+  ogImage: {
+    fonts: ['Inter Tight:500', 'Instrument Serif:400', 'Caveat:400'],
+  },
 
   modules: [
     '@nuxtjs/i18n',

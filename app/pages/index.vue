@@ -1,6 +1,17 @@
 <script setup lang="ts">
 const { t, locale } = useI18n()
 
+// ── OG Image ──────────────────────────────────────────────────────────
+defineOgImage({
+  component: 'Hero',
+  props: {
+    subtitle: locale.value === 'fr'
+      ? 'Je construis des solutions fiables, pensées pour la production.'
+      : 'I build reliable solutions, designed to be used in production.',
+    locale: locale.value,
+  },
+})
+
 // ── SEO ──────────────────────────────────────────────────────────────
 useSeoMeta({
   title: () => t('seo.title'),
@@ -9,7 +20,6 @@ useSeoMeta({
   ogDescription: () => t('seo.description'),
   ogType: 'website',
   ogUrl: 'https://yunikon.re',
-  ogImage: 'https://yunikon.re/og-image.jpg',
   ogImageAlt: () => t('seo.og_image_alt'),
   twitterCard: 'summary_large_image',
   twitterTitle: () => t('seo.title'),
