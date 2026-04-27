@@ -77,9 +77,23 @@ onUnmounted(() => clearTimeout(resumeTimeout))
         {{ project.desc }}
       </p>
 
-      <p class="text-[14px] leading-[1.6] text-ink-2 m-0 max-w-[480px]">
-        {{ project.context }}
-      </p>
+      <div class="flex flex-col gap-2">
+        <p class="text-[14px] leading-[1.6] text-ink-2 m-0 max-w-[480px]">
+          {{ project.context }}
+        </p>
+        <a
+          v-if="project.community"
+          :href="project.community.href"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-1.5 font-mono text-[11px] tracking-[0.08em] text-muted no-underline transition-colors duration-200 hover:text-ink w-fit"
+        >
+          <svg width="10" height="10" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M6 3h7v7M13 3 5 11M11 11v2H3V5h2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          {{ project.community.label }}
+        </a>
+      </div>
 
       <!-- Solution chips -->
       <div class="flex flex-wrap gap-2">

@@ -24,6 +24,7 @@ export interface Project {
   links: ProjectLink[]
   images: string[]
   beforeAfterPairs?: BeforeAfterPair[]
+  community?: { href: string; label: string }
   tone: { hue: string; soft: string }
   translations: {
     fr: ProjectTranslation
@@ -151,9 +152,9 @@ export const projects: Project[] = [
     title: 'Fankarr',
     stack: ['Vue 3', 'Express', 'Python', 'TypeScript', 'Docker', 'Bun', 'CI/CD'],
     links: [
-      { kind: 'demo', href: 'https://fan-kai.fandom.com/fr' },
       { kind: 'github', href: 'https://github.com/Masutayunikon/FanKarr' },
     ],
+    community: { href: 'https://fan-kai.fandom.com/fr', label: 'Fan-Kai · Communauté' },
     images: [
       '/projects/fankarr/catalog.png',
       '/projects/fankarr/serie.png',
@@ -208,6 +209,7 @@ export function useLocalizedProjects(locale: Locale) {
     links: p.links,
     images: p.images,
     beforeAfterPairs: p.beforeAfterPairs,
+    community: p.community,
     tone: p.tone,
     ...p.translations[locale],
   }))
