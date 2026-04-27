@@ -36,6 +36,7 @@ useSeoMeta({
       ? 'Applications web sur mesure, livrées en production. Spécialisé Nuxt 4, Vue.js, Node.js.'
       : 'Custom web applications, shipped to production. Specialised in Nuxt 4, Vue.js, Node.js.',
   robots: 'index, follow',
+  googleSiteVerification: 'NR8d26wp58K9TrGUUxg7ikJUf5JAe96xVJeh1YTGMaQ',
 })
 
 defineOgImage('Hero.takumi', {
